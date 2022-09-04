@@ -7,9 +7,15 @@
 //============================================================================
 
 #include <iostream>
+#include "String.h"
+
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	return 0;
+
+	String str("Hello");
+
+	//str.Reserve(10);
+	cout << str;
+
 }

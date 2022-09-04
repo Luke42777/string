@@ -8,15 +8,24 @@
 #ifndef STRING_H_
 #define STRING_H_
 
-namespace std {
-
+#include <iostream>
 class String {
 public:
 	String();
-	virtual ~String();
+	String(const char*);
+	~String();
 	String(const String &other);
+
+	size_t Length()const;
+	void Reserve(size_t newCapacity);
+	String operator+(const String& other)const;
+	friend std::ostream& operator<<(std::ostream& consoleOut, const String& str);
+public:
+	 char* moptrData;
+	 size_t mSize;
+	 size_t mCapacity;
 };
 
-} /* namespace std */
+
 
 #endif /* STRING_H_ */
