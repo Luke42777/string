@@ -13,9 +13,10 @@ using namespace std;
 
 int main() {
 
-	String str("Hello");
+	String str1("Hello");
+	String str2("there");
 
-	//str.Reserve(10);
-	cout << str;
+
+	cout <<  (str1 + str2).mCapacity;
 
 }

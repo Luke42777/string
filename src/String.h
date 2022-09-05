@@ -9,6 +9,7 @@
 #define STRING_H_
 
 #include <iostream>
+
 class String {
 public:
 	String();
@@ -17,10 +18,12 @@ public:
 	String(const String &other);
 
 	size_t Length()const;
-	void Reserve(size_t newCapacity);
+	String Reserve(size_t newCapacity);
 	String operator+(const String& other)const;
 	friend std::ostream& operator<<(std::ostream& consoleOut, const String& str);
-public:
+
+
+public://TODO change for private
 	 char* moptrData;
 	 size_t mSize;
 	 size_t mCapacity;
